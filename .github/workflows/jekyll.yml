@@ -17,7 +17,7 @@ jobs:
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ github.repository_name }}"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./_site
       - name: Deploy to GitHub Pages
