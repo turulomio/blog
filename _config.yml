@@ -1,0 +1,8 @@
+title: My Blog
+description: A blog about my projects and thoughts.
+baseurl: "/myblog"
+url: ""
+
+theme: minima
+plugins:
+  - jekyll-feed
