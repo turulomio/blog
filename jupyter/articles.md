@@ -14,8 +14,7 @@ kernelspec:
 
 # Articles
 
-```{code-cell}
-:tags: [remove-input] 
+```python
 import os
 from IPython.display import display, Markdown
 

@@ -9,7 +9,6 @@ project:
   github: https://github.com/turulomio/blog
   toc:
     - file: intro.md
-    - file: articles.md
     
 site:
   template: book-theme
