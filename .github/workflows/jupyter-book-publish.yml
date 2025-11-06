@@ -14,7 +14,7 @@ jobs:
         id-token: write   # to verify the deployment originates from an appropriate source
         contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -32,6 +32,8 @@ jobs:
       - name: Build Jupyter Book
         run: |
           jupyter-book build jupyter
+      - name: List _build directory contents
+        run: ls -la jupyter/_build
       - name: Upload artifact to pass to GitHub Pages
         run: |
           ghp-import -n -p -f jupyter/_build/html
