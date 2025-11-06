@@ -31,13 +31,9 @@ jobs:
           git config --global user.name "turulomio" 
       - name: Build Jupyter Book
         run: |
-          pwd
           cd jupyter
-          pwd
-          ls -la
-          BASE_URL=/blog jupyter book build --html
+          BASE_URL=/blog jupyter book build --html --execute
       - name: Upload artifact to pass to GitHub Pages
         run: |
           cd jupyter
-          ls -la
           ghp-import -n -p -f _build/html
