@@ -38,4 +38,6 @@ jobs:
           jupyter-book build --html
       - name: Upload artifact to pass to GitHub Pages
         run: |
+          cd jupyter
+          ls -la
           ghp-import -n -p -f _build/html
