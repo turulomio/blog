@@ -31,7 +31,7 @@ jobs:
           git config --global user.name "turulomio" 
       - name: Build Jupyter Book
         run: |
-          jupyter-book build jupyter/
+          jupyter-book build jupyter
       - name: Upload artifact to pass to GitHub Pages
         run: |
           ghp-import -n -p -f jupyter/_build/html
