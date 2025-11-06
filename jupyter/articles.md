@@ -14,18 +14,15 @@ kernelspec:
 
 # Articles
 
-```python
-import os
+```{code-cell} ipython3
+from pathlib import Path
 from IPython.display import display, Markdown
 
-articles_dir = "articles"
-articles = [f for f in os.listdir(articles_dir) if f.endswith(".md")]
-
-markdown_output = "## Article List\n\n"
-for article in sorted(articles):
-    title = os.path.splitext(article)[0]
-    link = f"articles/{title}"
-    markdown_output += f"* [{title}]({link}.html)\n"
-
-display(Markdown(markdown_output))
+# Genera una lista de enlaces a los artículos en el directorio 'articles/'
+# La ruta debe ser relativa al directorio 'jupyter/', donde se ejecuta el build.
+articles_path = Path("../articles")
+# The link needs to be a valid Markdown link pointing to the generated HTML file.
+article_links = [f"* [{p.stem.replace('_', ' ').title()}]({p.with_suffix('.html')})" for p in sorted(articles_path.glob("*.md"))]
+markdown_list = "\n".join(article_links)
+display(Markdown(markdown_list))
 ```
