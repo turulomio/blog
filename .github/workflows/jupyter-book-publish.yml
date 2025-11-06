@@ -35,7 +35,7 @@ jobs:
           cd jupyter
           pwd
           ls -la
-          jupyter-book build .
+          jupyter-book build intro.md
       - name: List _build directory contents
         run: ls -la _build
       - name: Upload artifact to pass to GitHub Pages
