@@ -10,6 +10,7 @@ project:
   toc:
     - file: intro.md
     - file: articles.md
+    - file: articles/first.md
     
 site:
   template: book-theme
@@ -17,3 +18,9 @@ site:
   #   favicon: favicon.ico
      logo: images/turulomio.png
 
+
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://mystmd.org/guide
+  domains: []

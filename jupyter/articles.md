@@ -1,20 +1,11 @@
----
-jupytext:
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.11.5
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
+
 
 # Articles
 
 ```{code-cell} ipython3
+---
+class: hide-input
+---
 from pathlib import Path
 from IPython.display import display, Markdown
 
@@ -26,3 +17,5 @@ article_links = [f"* [{p.stem.replace('_', ' ').title()}]({p.with_suffix('.html'
 markdown_list = "\n".join(article_links)
 display(Markdown(markdown_list))
 ```
+
+And here I reference [](#markdown-myst).

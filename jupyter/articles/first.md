@@ -13,3 +13,7 @@ kernelspec:
 ---
 
 # My first article
+
+```{code-cell} ipython3
+print("HOLA")
+```
