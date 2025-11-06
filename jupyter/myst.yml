@@ -2,14 +2,17 @@
 version: 1
 project:
   id: fa34de0e-b728-4645-9a49-05223655ef02
-  # title:
-  # description:
+  title: Turulomio's Blog
+  description: 
   # keywords: []
   # authors: []
   github: https://github.com/turulomio/blog
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: intro.md
+    - file: articles.md
+    
 site:
   template: book-theme
-  # options:
+  options:
   #   favicon: favicon.ico
-  #   logo: site_logo.png
+     logo: images/turulomio.png
