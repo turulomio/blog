@@ -3,7 +3,7 @@ version: 1
 project:
   id: fa34de0e-b728-4645-9a49-05223655ef02
   title: Turulomio's Blog
-  description: 
+  description: IT news and other
   # keywords: []
   # authors: []
   github: https://github.com/turulomio/blog

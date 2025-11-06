@@ -17,24 +17,9 @@ kernelspec:
 
 My personal blog
 
-[See all articles](articles.html)
 ## Project links
 
 * https://github.com/turulomio/blog/
-
-```{code-cell}
-:label: markdown-myst2
-print("HI")
-```
-
-#| label: mylabel
-print("hi")
-
-
-```{code-cell} python
-:label: markdown-myst
-print("HI")
-```
 
 
 And here I reference [](#markdown-myst).

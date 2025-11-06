@@ -1,21 +1,25 @@
-
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.16.1
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
 
 # Articles
 
-```{code-cell} ipython3
----
-class: hide-input
----
-from pathlib import Path
-from IPython.display import display, Markdown
+```{code-cell}
+:label: markdown-myst2
+:tag: remove-input
 
-# Genera una lista de enlaces a los artículos en el directorio 'articles/'
-# La ruta debe ser relativa al directorio 'jupyter/', donde se ejecuta el build.
-articles_path = Path("../articles")
-# The link needs to be a valid Markdown link pointing to the generated HTML file.
-article_links = [f"* [{p.stem.replace('_', ' ').title()}]({p.with_suffix('.html')})" for p in sorted(articles_path.glob("*.md"))]
-markdown_list = "\n".join(article_links)
-display(Markdown(markdown_list))
+print("This is a list of articles")
 ```
 
-And here I reference [](#markdown-myst).
+* [First](articles/first)
+* [Second](articles/second)
