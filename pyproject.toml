@@ -1,0 +1,33 @@
+[project]
+name = "blog"                 
+version = "0.1.0"            
+description = "My personal blog"
+license = { text = "GPL-3.0" } # Licenses are now specified in a sub-table or with text
+readme = "README.md"
+requires-python = ">=3.9,<4"  # Use requires-python instead of python in dependencies
+authors = [{ name = "turulomio", email = "turulomio@yahoo.es" }]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+poethepoet = "^0.26.1"
+coverage = "^7.5.3"
+jupyter-book = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"] # Ensure this is a compatible version
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+jupyter = { shell = "jupyter-book build jupyter; rm -Rf docs; mv jupyter/_build/html docs/; touch docs/.nojekyll"}
+
+
+[project.urls]
+homepage = "https://github.com/turulomio/blog/"
+repository = "https://github.com/turulomio/blog/"
+
